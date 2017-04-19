@@ -18,15 +18,13 @@
         </author>
         
 		
-        <platform name="android">
-              <icon src="img/android/icono2.png" />
-        </platform>
+        <icon src="img/android/icono2.png" />
 
-        <platform name="ios">
-            <icon src="img/ios/icon-57-2x.png"  width = "180" height = "180"/>
-            <icon src="img/ios/icon-72-2x.png"  width = "180" height = "180"/>
-		 </platform>
-         
+        <icon src="img/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+        <icon src="img/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+        <icon src="img/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
+        <icon src="img/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+
         <splash src="img/cae-loe-splash.png" gap:platform="android"/>
         
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
