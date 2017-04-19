@@ -2,7 +2,7 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.cae3076.Barcode"
+        id          = "com.cae3076.Modulacion"
         version     = "1.0.1"
         versionCode = "1" >
 		<!-- versionCode is optional and Android only -->
@@ -13,14 +13,21 @@
 		<description>
             Aplicación de para leer código de barras de pedimento.
         </description>
-		<author href="#" email="adominguez@cae3076.com">
-            Adrián Domínguez
+		<author href="#" email="sistemas_cae@cae3076.com">
+            Sistemas CAE
         </author>
         
-		
-		<icon src="img/icono2.png" />
-		<splash src="img/cae-loe-splash.png"/>
-       <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+		<platform name="android">
+		  <icon src="img/icono2.png" />
+		  <splash src="img/cae-loe-splash.png"/>
+        </platform>
+
+        <platform name="ios">
+          <icon src="img/icono2.png" />
+          <splash src="img/cae-loe-splash.png"/>
+        </platform>
+
+        <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
         
         <gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>
         <gap:plugin name="org.apache.cordova.network-information" source="npm"/>
