@@ -23,7 +23,7 @@
         </platform>
 
         <platform name="ios">
-          <icon src="img/icono2.png" />
+          <icon src="img/icono_iphone.png" />
           <splash src="img/cae-loe-splash.png"/>
         </platform>
 
