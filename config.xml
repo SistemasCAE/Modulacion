@@ -7,7 +7,6 @@
 		<!-- versionCode is optional and Android only -->
 		<preference name="phonegap-version" value="cli-6.5.0" />
         <preference name="SplashScreenDelay" value="5000" />
-        <preference name="AutoHideSplashScreen" value="false" />
 
         <name>Modulación</name>
 		<description>
