@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
-		xmlns:android = "http://schemas.android.com/apk/res/android"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.cae3076.Modulacion"
         version     = "1.0.1"
@@ -18,10 +17,16 @@
             Sistemas CAE
         </author>
         
-		<icon src="img/icono2.png" />
-        <icon src="img/ios/icon-57-2x.png"  gap:platform="ios" width = "180" height = "180"/>
-        <icon src="img/ios/icon-72-2x.png"  gap:platform="ios" width = "180" height = "180"/>
 		
+        <platform name="android">
+              <icon src="img/android/icono2.png" />
+        </platform>
+
+        <platform name="ios">
+            <icon src="img/ios/icon-57-2x.png"  width = "180" height = "180"/>
+            <icon src="img/ios/icon-72-2x.png"  width = "180" height = "180"/>
+		 </platform>
+         
         <splash src="img/cae-loe-splash.png" gap:platform="android"/>
         
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
