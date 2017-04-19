@@ -8,7 +8,8 @@
 		<!-- versionCode is optional and Android only -->
 		<preference name="phonegap-version" value="cli-6.5.0" />
         <preference name="SplashScreenDelay" value="5000" />
-       
+        <preference name="AutoHideSplashScreen" value="false" />
+
         <name>Modulación</name>
 		<description>
             Aplicación de para leer código de barras de pedimento.
@@ -17,16 +18,12 @@
             Sistemas CAE
         </author>
         
-		<platform name="android">
-		  <icon src="img/icono2.png" />
-		  <splash src="img/cae-loe-splash.png"/>
-        </platform>
-
-        <platform name="ios">
-          <icon src="img/icono_iphone.png" />
-          <splash src="img/cae-loe-splash.png"/>
-        </platform>
-
+		<icon src="img/icono2.png" />
+        <icon src="img/ios/icon-57-2x.png"  gap:platform="ios" width = "180" height = "180"/>
+        <icon src="img/ios/icon-72-2x.png"  gap:platform="ios" width = "180" height = "180"/>
+		
+        <splash src="img/cae-loe-splash.png" gap:platform="android"/>
+        
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
         
         <gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>
