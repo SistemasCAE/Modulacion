@@ -65,8 +65,48 @@
 			</div>
 				
 		</div>
-		<div data-role="footer" data-position="fixed">
-			<h4>Informática CAE</h4>			
+		<div id="pieHome" data-role="footer" data-position="fixed">
+			<div class="datosFooter">&nbsp;</div>
+			<div class="datosFooter">Inform&aacute;tica CAE</div>
+			<div class="datosFooter">
+				<a href="#pendientes" id="botonPendientes" class="ui-btn">
+					&nbsp;Pendientes
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="pendientes" data-role="page">
+		<div data-role="header">
+			<h1>Historial</h1>
+			<a href="#" data-rel="back">
+				Atrás
+			</a>
+		</div>
+		<div class="ui-content">
+			<table class="informacion" width="100%" align="center">
+				<tr>
+						<th width="7%">#</th>
+						<th width="25%">Usuario</th>
+						<th width="43%">Pedimento</th>
+						<th width="25%">Pendiente Enviado</th>
+					</tr>	
+				<tbody id="listaPendientes">
+					
+				</tbody>
+			</table>
+		</div>
+		<div id="pieTabla" data-role="footer" data-position="fixed">
+			<div class="datosFooter">
+				<a href="#" id="botonEnviar" class="ui-btn">
+					&nbsp;Enviar
+				</a>
+			</div>
+			<div class="datosFooter">Pendientes</div>
+			<div class="datosFooter">
+				<a href="#" id="botonLimpiar" class="ui-btn">
+					&nbsp;Limpiar
+				</a>
+			</div>
 		</div>
 	</div>
 	
@@ -75,6 +115,7 @@
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="js/API/barcodeScanner.js"></script>
 	<script type="text/javascript" src="js/API/networkInformation.js"></script>
+	<script type="text/javascript" src="js/almacena.js"></script>
 	<script type="text/javascript" src="js/actions.js"></script>
 	</body>
 </html>
