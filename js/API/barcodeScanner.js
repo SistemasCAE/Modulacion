@@ -16,6 +16,7 @@ var bcs = {
 					}
 				  }
 			  },
+			  
 			function (error) {
 				//alert("Scanning failed: " + error);
 				window.plugins.toast.show("Scanning failed: " + error, 'long', 'center');

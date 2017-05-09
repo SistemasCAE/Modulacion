@@ -17,7 +17,6 @@ var fn = {
 		$("#botonEnviar").tap(almacena.consultaDatosPendientes);
 		$("#botonLimpiar").tap(almacena.limpiar);
 		document.addEventListener("backbutton", fn.onBackKeyDown, false);
-		//window.localStorage.setItem("nombreUsuario", "adominguez");
 	},
 	onBackKeyDown: function(){
 		// Handle the back button
