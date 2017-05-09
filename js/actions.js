@@ -13,6 +13,9 @@ var fn = {
 		$("#botonEscanea").tap(bcs.abrirCamara);
 		$("#botonIniciarSesion").tap(fn.iniciarSesion);
 		$("#botonCerrarSesion").tap(fn.cerrarSesion);
+		$("#botonPendientes").tap(almacena.cargarDatosPendientes);
+		$("#botonEnviar").tap(almacena.consultaDatosPendientes);
+		$("#botonLimpiar").tap(almacena.limpiar);
 		document.addEventListener("backbutton", fn.onBackKeyDown, false);
 		//window.localStorage.setItem("nombreUsuario", "adominguez");
 	},
@@ -96,7 +99,7 @@ var fn = {
 				usu: window.localStorage.getItem("nombreUsuario")
 			}
 		}).done(function(mensaje){
-			//alert("Datos enviados");
+			//alert( "Datos enviados");
 			window.plugins.toast.show(mensaje, 'long', 'center');
 			//alert(mensaje);
 			fn.sleep(3000);
