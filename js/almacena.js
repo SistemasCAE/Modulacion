@@ -99,14 +99,12 @@ var almacena = {
 	},
 
 	enviarPendientes: function(tx, res){
-		window.location.href="#inicio";
 		var cantidad = res.rows.length;
 		var resultado = '<tr><td colspan="4">No hay pedimentos pendientes</td></tr>';
 		//alert("Primer paso: " + cantidad.toString());
 		if(cantidad > 0){
 			// SI HAY RESERVAS EN EL HISTORIAL
 			resultado = '';
-
 			for( var i = 0; i < cantidad; i++){
 				almacena.resultado = "";
 				almacena.informacion2 = "";	
@@ -129,21 +127,11 @@ var almacena = {
 					est = "Datos invalidos";
 				}
 				if(est != "Datos invalidos"){
-					almacena.informacion2 = inf;
-					//alert("Envia primero");
-					$.ajax({
-						method: "POST",
-						url: "http://intranet.cae3076.com:50000/CursoAndroid/obtieneDatos.php",
-						data: { 
-							datos: inf,
-							usu: window.localStorage.getItem("nombreUsuario")
-						}
-					}).done(almacena.envioCorrecto);
+					almacena.enviaAjax(inf);
+					
 				}
-				
 				//alert("Termina envio primero");
 			}
-			//alert();
 			$("#listaPendientes").html("");
 			alert("Envío Finalizado");
 		}
@@ -151,32 +139,29 @@ var almacena = {
 		//$("#informacion").removeClass("ui-table-reflow");
 		
 	},
-	envioCorrecto: function(mensaje){
+	
+	enviaAjax: function(informacion){
+		$.ajax({
+				method: "POST",
+				url: "http://intranet.cae3076.com:50000/CursoAndroid/obtieneDatos.php",
+				data: { 
+					datos: informacion,
+					usu: window.localStorage.getItem("nombreUsuario")
+				}
+			}).done(function(mensaje){
 		//alert("asigna mensaje "+mensaje);
 		almacena.resultado = mensaje;
 		almacena.db.transaction(function(tx){
-									if(almacena.resultado != "" && almacena.informacion2 != ""){
-										tx.executeSql('CREATE TABLE IF NOT EXISTS Pendientes (id INTEGER, usuario, informacion, estado, primary key(informacion))');
-										alert('UPDATE Pendientes SET estado = "'+mensaje+'" WHERE informacion= "'+almacena.informacion2+'" AND usuario="'+window.localStorage.getItem("nombreUsuario")+'"');
-										tx.executeSql('UPDATE Pendientes SET estado = "'+mensaje+'" WHERE informacion= "'+almacena.informacion2+'" AND usuario="'+window.localStorage.getItem("nombreUsuario")+'"');
-										almacena.resultado = "";
-										almacena.informacion2 = "";	
-									}
-
-								}, almacena.error);
-	},
-	actualizarPendientes: function(tx){
-		if(almacena.resultado != "" && almacena.informacion2 != ""){
-			tx.executeSql('CREATE TABLE IF NOT EXISTS Pendientes (id INTEGER, usuario, informacion, estado, primary key(informacion))');
-			//alert('UPDATE Pendientes SET estado = "'+almacena.resultado+'" WHERE informacion= "'+almacena.informacion2+'"');
-			tx.executeSql('UPDATE Pendientes SET estado = "'+almacena.resultado+'" WHERE informacion= "'+almacena.informacion2+'"');
-			
-			almacena.resultado = "";
-			almacena.informacion2 = "";	
-		}
-		
+							almacena.hacerUpdate(tx, informacion, mensaje);
+						}, almacena.error);
+					});
 	},
 	
+	hacerUpdate: function(tx, informacion, mensaje){
+		tx.executeSql('CREATE TABLE IF NOT EXISTS Pendientes (id INTEGER, usuario, informacion, estado, primary key(informacion))');
+		tx.executeSql('UPDATE Pendientes SET estado = "'+mensaje+'" WHERE informacion= "'+informacion+'" AND usuario="'+window.localStorage.getItem("nombreUsuario")+'"');
+		almacena.cargarDatosPendientes();
+	},
 	
 	limpiar: function(){
 		almacena.db = almacena.conectarDB();
