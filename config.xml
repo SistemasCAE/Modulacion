@@ -29,6 +29,8 @@
         <icon src="img/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
         <icon src="img/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
         <icon src="img/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+        <icon src="img/icon/ios/icon-120.png"           gap:platform="ios"        width="120" height="120" />
+        
 		<splash src="img/splash/android/cae-loe-splash.png" platform="android"/>
         <gap:splash src="img/splash/ios/splash.png" platform="ios" width="640" height="1136"/>
 
