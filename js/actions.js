@@ -60,7 +60,7 @@ var fn = {
 		}else{
 			$.ajax({
 				method: "POST",
-				url: "http://200.92.207.198 50081/AppModulacion/compruebaSesion.php",
+				url: "http://200.92.207.198:50081/AppModulacion/compruebaSesion.php",
 				data: { 
 					usu: usuario,
 					pass: password
@@ -92,7 +92,7 @@ var fn = {
 		//alert("Nombre: "+nombreR+" Email: "+emailR+" Telefono: "+telefonoR+" Password: "+passwordR+" Foto: "+fotoR);
 		$.ajax({
 			method: "POST",
-			url: "http://200.92.207.198 50081/AppModulacion/obtieneDatos.php",
+			url: "http://200.92.207.198:50081/AppModulacion/obtieneDatos.php",
 			data: { 
 				datos: datosLeidos,
 				usu: window.localStorage.getItem("nombreUsuario")
