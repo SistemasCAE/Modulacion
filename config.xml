@@ -16,7 +16,9 @@
        	
         <preference name="SplashScreenDelay" value="5000" />
 		<!--<preference name="android-minSdkVersion" value="28" />-->
-
+		
+		<preference name="android-build-tool" value="gradle" />
+		
         <name>Modulación</name>
 		<description>
             Aplicación para leer código de barras de pedimento.
@@ -43,8 +45,7 @@
 		</gap:config-file>	
        
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-       <!-- <gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>-->
-		<plugin name="phonegap-plugin-barcodescanner" />
+        <gap:plugin name="phonegap-plugin-barcodescanner" source="npm"/>
         <gap:plugin name="cordova-plugin-network-information" source="npm"/>
        <!-- <gap:plugin name="org.apache.cordova.vibration" source="npm"/>-->
         <gap:plugin name="cordova-plugin-x-toast" source="npm" />
