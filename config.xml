@@ -15,7 +15,7 @@
       	</platform>
        	
         <preference name="SplashScreenDelay" value="5000" />
-		<preference name="android-minSdkVersion" value="28" />
+		<!--<preference name="android-minSdkVersion" value="28" />-->
 
         <name>Modulación</name>
 		<description>
