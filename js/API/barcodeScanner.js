@@ -1,6 +1,7 @@
 var bcs = {
 	abrirCamara: function(){
-		cordova.plugins.barcodeScanner.scan(
+		window.plugins.toast.show("aquiiiiiiiiiiii", 'long', 'center');
+		/*cordova.plugins.barcodeScanner.scan(
 			function (result) {
 				if(result.text != ""){
 					//navigator.vibrate(500);
@@ -31,6 +32,6 @@ var bcs = {
 				"showTorchButton" : true, // iOS and Android 
 				"torchOn": false // Android, launch with the torch switched on (if available) 
 			}
-		);	
+		);*/	
 	}
 };
