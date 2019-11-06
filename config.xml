@@ -2,8 +2,8 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.cae3076.Barcode"
-        version     = "1.3.1"
-        versionCode = "2.1" >
+        version     = "1.4.1"
+        versionCode = "3.1" >
 		<!-- versionCode is optional and Android only -->
 		
       	<!--<preference name="phonegap-version" value="3.7.0" />-->
@@ -15,6 +15,7 @@
       	</platform>
        	
         <preference name="SplashScreenDelay" value="5000" />
+		<preference name="android-minSdkVersion" value="28" />
 
         <name>Modulación</name>
 		<description>
@@ -39,11 +40,12 @@
 
        	<gap:config-file platform="ios" parent="NSCameraUsageDescription" overwrite="true">
    			<string>La aplicacion utiliza la camara para leer los codigos de barras</string>
-		</gap:config-file>
+		</gap:config-file>	
        
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
         <gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>
         <gap:plugin name="cordova-plugin-network-information" source="npm"/>
+       <!-- <gap:plugin name="org.apache.cordova.vibration" source="npm"/>-->
         <gap:plugin name="cordova-plugin-x-toast" source="npm" />
         <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
 
