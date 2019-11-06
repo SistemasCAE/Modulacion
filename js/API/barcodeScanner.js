@@ -31,6 +31,6 @@ var bcs = {
 				"showTorchButton" : true, // iOS and Android 
 				"torchOn": false // Android, launch with the torch switched on (if available) 
 			}
-		);
+		);	
 	}
 };
