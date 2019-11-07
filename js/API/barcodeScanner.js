@@ -25,7 +25,7 @@ var bcs = {
 			  disableSuccessBeep: false // iOS and Android
 		  }
 	   );
-		
+		window.plugins.toast.show("aquiiiiiiiiiiii22222222222222222222", 'long', 'center');
 		/*cordova.plugins.barcodeScanner.scan(
 			function (result) {
 				if(result.text != ""){
