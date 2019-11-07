@@ -15,7 +15,7 @@
       	</platform>
        	
         <preference name="SplashScreenDelay" value="5000" />
-		<preference name="android-minSdkVersion" value="28" />
+		<!--<preference name="android-minSdkVersion" value="28" />-->
 		
 		<preference name="android-build-tool" value="gradle" />
 		
@@ -45,7 +45,8 @@
 		</gap:config-file>	
        
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-        <gap:plugin name="cordova-plugin-qr-barcode-scanner" source="npm"/>
+		<plugin name="cordova-plugin-qr-barcode-scanner" />
+        <!--<gap:plugin name="cordova-plugin-qr-barcode-scanner" source="npm"/>-->
 		<!--<gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>-->
         <gap:plugin name="cordova-plugin-network-information" source="npm"/>
        <!-- <gap:plugin name="org.apache.cordova.vibration" source="npm"/>-->
