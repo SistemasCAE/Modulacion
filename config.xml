@@ -6,13 +6,13 @@
 	versionCode = "3.1" >
 	<!-- versionCode is optional and Android only -->
 
-	<preference name="phonegap-version" value="3.7.0" />
+<!--	<preference name="phonegap-version" value="3.7.0" />-->
 	<!--<platform name="ios">
 		<preference name="phonegap-version" value="3.7.0" />
 	</platform>-->
-	<!--<platform name="android">
-		<preference name="phonegap-version" value="cli-6.5.0" />
-	</platform>-->
+	<platform name="android">
+		<preference name="phonegap-version" value="cli-6.5.1" />
+	</platform>
 
 	<preference name="SplashScreenDelay" value="5000" />
 	<!--<preference name="android-minSdkVersion" value="28" />-->
