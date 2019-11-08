@@ -47,10 +47,10 @@
 		</gap:config-file>	
        
         <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-		<!--<plugin name="cordova-plugin-qr-barcode-scanner" />-->
-		<plugin name="phonegap-plugin-barcodescanner" spec="7.0.0" />
-        <!--<gap:plugin name="cordova-plugin-qr-barcode-scanner" source="npm"/>-->
-		<!--<gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>-->
+		<plugin name="cordova-plugin-qr-barcode-scanner" />
+		<!--<plugin name="phonegap-plugin-barcodescanner" spec="7.0.0" />-->
+        <gap:plugin name="cordova-plugin-qr-barcode-scanner" source="npm"/>
+		<gap:plugin name="com.phonegap.plugins.barcodescanner" source="npm"/>
         <gap:plugin name="cordova-plugin-network-information" source="npm"/>
        <!-- <gap:plugin name="org.apache.cordova.vibration" source="npm"/>-->
         <gap:plugin name="cordova-plugin-x-toast" source="npm" />
