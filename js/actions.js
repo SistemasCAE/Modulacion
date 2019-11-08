@@ -11,7 +11,7 @@ var fn = {
 		//bcs.abrirCamara();
 		fn.compruebaSesion();
 		//$("#botonEscanea").tap(bcs.abrirCamara););
-		$("#botonEscanea").tap(fn.abreCamara);)
+		$("#botonEscanea").tap(fn.abreCamara);
 		$("#botonIniciarSesion").tap(fn.iniciarSesion);
 		$("#botonCerrarSesion").tap(fn.cerrarSesion);
 		$("#botonPendientes").tap(almacena.cargarDatosPendientes);
