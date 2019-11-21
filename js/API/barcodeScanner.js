@@ -1,6 +1,5 @@
 var bcs = {
 	abrirCamara: function(){
-		window.plugins.toast.show("aquiiiiiiiiiiii", 'long', 'center');
 		cordova.plugins.barcodeScanner.scan(
 			function (result) {
 				if(result.text != ""){
