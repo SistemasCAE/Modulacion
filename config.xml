@@ -13,7 +13,7 @@
 			<preference name="phonegap-version" value="3.7.0" />
 		</platform>-->
       	<platform name="android">
-      		<preference name="phonegap-version" value="cli-6.5.0" />
+      		<preference name="phonegap-version" value="cli-7.1.0" />
       	</platform>
        	
         <preference name="SplashScreenDelay" value="5000" />
