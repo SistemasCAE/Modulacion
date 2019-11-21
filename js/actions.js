@@ -10,8 +10,8 @@ var fn = {
 		 */
 		//bcs.abrirCamara();
 		fn.compruebaSesion();
-		//$("#botonEscanea").tap(bcs.abrirCamara);
-		$("#botonEscanea").tap(fn.abrirCamara);
+		$("#botonEscanea").tap(bcs.abrirCamara);
+		//$("#botonEscanea").tap(fn.abrirCamara);
 		$("#botonIniciarSesion").tap(fn.iniciarSesion);
 		$("#botonCerrarSesion").tap(fn.cerrarSesion);
 		$("#botonPendientes").tap(almacena.cargarDatosPendientes);
@@ -32,7 +32,7 @@ var fn = {
 		window.location.href = "#inicioSesion";
 	},
 	
-	abrirCamara: function(){
+	/*abrirCamara: function(){
 		window.plugins.toast.show("aquiiiiiiiiiiii abre camaraaaa", 'long', 'center');
 		cordova.plugins.barcodeScanner.scan(
 			function (result) {
@@ -52,7 +52,7 @@ var fn = {
 			  "orientation" : "landscape" // Android only (portrait|landscape), default unset so it rotates with the device
 			}
 		);
-	},
+	},*/
 	iniciarSesion: function(){
 		var usuario = $("#usuarioSesion").val();
 		var password = $("#passwordSesion").val();
