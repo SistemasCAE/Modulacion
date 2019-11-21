@@ -9,9 +9,9 @@
 		<!-- versionCode is optional and Android only -->
 		
       	
-		<platform name="ios">
+		<!--<platform name="ios">
 			<preference name="phonegap-version" value="cli-7.1.0" />
-		</platform>
+		</platform>-->
       	<platform name="android">
       		<preference name="phonegap-version" value="cli-7.1.0" />
       	</platform>
