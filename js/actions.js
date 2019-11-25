@@ -121,16 +121,22 @@ var fn = {
 				usu: window.localStorage.getItem("nombreUsuario")
 			}
 		}).done(function(mensaje){
-			//window.plugins.toast.show(mensaje, 'long', 'center');
-			if(mensaje=='1'){
+			//alert( "Datos enviados");
+			window.plugins.toast.show(mensaje, 'long', 'center');
+			//alert(mensaje);
+			fn.sleep(3000);
+			//bcs.abrirCamara().delay( 3000 );
+			
+			
+			/*if(mensaje=='1'){
 				window.plugins.toast.show("Se ha actualizado el ESTATUS a TRAMITADO", 'long', 'center');
 			}elseif(mensaje=='0'){
 				window.plugins.toast.show("Ha ocurrido un error no se pudo cambiar el estatus", 'long', 'center');
 			}elseif(mensaje=='2'){
 				window.plugins.toast.show("No hay registro de este pedimento", 'long', 'center');
-			}
-			fn.sleep(3000);
-			//bcs.abrirCamara().delay( 3000 );
+			}*/
+			
+			
 		}).fail(function(error){
 			alert(error.status);
 			alert(error.message);
